@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Get Geo Data</title>
+    <script src="https://maps.googleapis.com/maps/api/js?KEY=AIzaSyBLk6Jy9o7hGYSG-2Xxwe82lFjUnhFZty8&libraries=places&callback=initAutocomplete" async defer></script>
+</head>
+<body>
+<script>
+    let autocomplete;
+    function initAutocomplete(){
+        autocomplete = new google.maps.places.Autocomplete(
+            document.getElementById("autocomplete"),
+            {
+                types:['establishment'],
+                componentRestrictions:{'country': ['IN']},
+                fields:['place_id', 'geometry', 'name']
+            }
+        );
+    }
+</script>
+<input id="autocomplete" placeholder="Enter a location" type="text" />
+
+</body>
+</html>

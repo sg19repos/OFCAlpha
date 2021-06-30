@@ -1,10 +1,9 @@
 import React from "react";
 import { Box, Grid, Typography } from "@material-ui/core";
-import { spacing } from "@material-ui/system";
 
-const FooterElement = ({ element }) => {
+const FooterElement = ({ element, handleOnClick }) => {
   return (
-    <Grid item xs={3} mt={2}>
+    <Grid item xs={2} mt={2} onClick={handleOnClick}>
       <Box mt={1}>
         <Grid item xs={12}>
           <element.icon />

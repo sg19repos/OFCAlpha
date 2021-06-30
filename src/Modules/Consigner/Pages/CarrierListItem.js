@@ -1,26 +1,35 @@
 import React from "react";
-import { Grid, Typography } from "@material-ui/core";
-import FemaleIcon from "../../../images/femaleIcon.png";
+import { Button, Grid, Typography } from "@material-ui/core";
+// import FemaleIcon from "../../../images/femaleIcon.png";
+import MaleIcon from "../../../images/maleIcon.png";
 import { TransportModes } from "../../../common/constants";
 import OurBtn from "../../Common/Pages/Btn";
 import CarrierRating from "../../Common/Rating";
 import VerifiedUserRoundedIcon from "@material-ui/icons/VerifiedUserRounded";
+import { format } from "date-fns";
 
-const CarrierListItem = ({ locationDetails }) => {
+const CarrierListItem = ({
+  journeyDetails,
+  rating,
+  vehicleType,
+  handleViewCarrierClicked
+}) => {
+  const { startingDate } = journeyDetails;
+
   const OriginDestination = ({ locationDetails }) => {
     const { origin, destination } = locationDetails;
 
     return (
       <Grid container>
-        <Grid item xs={12}>
+        <Grid item xs={12} className={"truncateText"}>
           <Typography variant={"caption"} className={"lighterText"}>
-            From :{" "}
+            Origin :{" "}
           </Typography>
           <Typography variant={"overline"}>{origin}</Typography>
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={12} className={"truncateText"}>
           <Typography variant={"caption"} className={"lighterText"}>
-            To:{" "}
+            Drop:{" "}
           </Typography>
           <Typography variant={"overline"}>{destination}</Typography>
         </Grid>
@@ -45,7 +54,7 @@ const CarrierListItem = ({ locationDetails }) => {
                 component={"div"}
                 className={"pt-0_5"}
               >
-                27th Oct
+                {format(startingDate, "MMM dd, yyyy")}
               </Typography>
             </Grid>
             <Grid item xs={3}>
@@ -61,7 +70,7 @@ const CarrierListItem = ({ locationDetails }) => {
                 component={"div"}
                 className={"pt-0_5"}
               >
-                02:00 PM
+                {format(startingDate, "hh: mm aa")}
               </Typography>
             </Grid>
             <Grid item xs={2}>
@@ -74,7 +83,7 @@ const CarrierListItem = ({ locationDetails }) => {
               </Typography>
               <Typography variant={"caption"} component={"div"}>
                 <img
-                  src={FemaleIcon}
+                  src={MaleIcon}
                   width={"20px"}
                   style={{ objectFit: "contain", padding: "12%" }}
                 />
@@ -89,7 +98,7 @@ const CarrierListItem = ({ locationDetails }) => {
                 Vehicle
               </Typography>
               <Typography variant={"caption"} component={"div"}>
-                <img src={TransportModes[2].icon} width={"40px"} />
+                <img src={TransportModes[vehicleType].icon} width={"40px"} />
               </Typography>
             </Grid>
             <Grid item xs={2} className={"alignCenter"}>
@@ -102,13 +111,13 @@ const CarrierListItem = ({ locationDetails }) => {
               </Typography>
               <VerifiedUserRoundedIcon
                 fontSize={"small"}
-                className={"greenColor "}
+                className={"greenColor mt-0_5"}
               />
             </Grid>
           </Grid>
         </Grid>
-        <Grid item xs={6}>
-          <OriginDestination locationDetails={locationDetails} />
+        <Grid item xs={6} className={"pr-1"}>
+          <OriginDestination locationDetails={journeyDetails} />
         </Grid>
         <Grid item xs={3}>
           <CarrierRating rating={4} />
@@ -119,11 +128,21 @@ const CarrierListItem = ({ locationDetails }) => {
           {/*<Button variant={"contained"} className={"orangeBG plainColor"}>*/}
           {/*  Deal*/}
           {/*</Button>*/}
-          <OurBtn
+          {/*<OurBtn
             bgColor={"violetBG"}
             fontColor={"plainColor"}
-            label={"Deal"}
-          />
+            label={"View"}
+          />*/}
+          <Button
+            className={"violetBG plainColor capitalise"}
+            size={"small"}
+            fullWidth
+            onClick={() => {
+              handleViewCarrierClicked();
+            }}
+          >
+            View
+          </Button>
         </Grid>
       </Grid>
     </Grid>

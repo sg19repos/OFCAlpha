@@ -13,8 +13,10 @@ import Button from "@material-ui/core/Button";
 import SendIcon from "@material-ui/icons/Send";
 import DirectionsBikeIcon from "@material-ui/icons/DirectionsBike";
 import BusinessCenterOutlinedIcon from "@material-ui/icons/BusinessCenterOutlined";
+import { useHistory } from "react-router-dom";
 
 const ModeSelection = () => {
+  const history = useHistory();
   return (
     <Grid container>
       <Grid item xs={12} className={"m-2"}>
@@ -42,6 +44,7 @@ const ModeSelection = () => {
                 size={"small"}
                 variant={"outlined"}
                 endIcon={<BusinessCenterOutlinedIcon />}
+                onClick={() => history.push("/newConsignment")}
               >
                 Let's see
               </Button>
@@ -83,6 +86,7 @@ const ModeSelection = () => {
                 size={"small"}
                 variant={"outlined"}
                 endIcon={<DirectionsBikeIcon />}
+                onClick={() => history.push("/createJourney")}
               >
                 Sure
               </Button>

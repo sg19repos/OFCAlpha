@@ -2,17 +2,42 @@ import React from "react";
 import Grid from "@material-ui/core/Grid";
 import { Typography } from "@material-ui/core";
 import { TransportModes } from "../../../common/constants";
+import ArrowBackRoundedIcon from "@material-ui/icons/ArrowBackRounded";
 
-const VehicleSelection = () => {
+// TODO - add others category in vehicles
+const VehicleSelection = ({
+  setCarrierState,
+  carrierState,
+  setVehicleDetails,
+  closeHandler
+}) => {
   return (
-    <>
-      <Typography variant={"h6"} align={"center"}>
-        How are you travelling?
-      </Typography>
+    <Grid container>
+      <Grid item xs={12} className={"alignLeft"}>
+        <ArrowBackRoundedIcon onClick={closeHandler} />
+      </Grid>
+      <Grid item xs={12}>
+        <Typography variant={"h6"} align={"center"}>
+          How are you travelling?
+        </Typography>
+      </Grid>
       <Grid container className={"mt-1 fullHeight overflowAuto"}>
         {TransportModes.map((element, index) => {
           return (
-            <Grid item xs={5} className={"vehicleSelectorCard ml-1 mb-1"}>
+            <Grid
+              item
+              xs={5}
+              className={"vehicleSelectorCard ml-1 mb-1"}
+              onClick={() => {
+                setVehicleDetails(i => {
+                  return {
+                    ...i,
+                    journey_vehicleType: index
+                  };
+                });
+                setCarrierState("vehicleType");
+              }}
+            >
               <Grid container>
                 <Grid item xs={12} align={"center"}>
                   <img
@@ -34,7 +59,7 @@ const VehicleSelection = () => {
           );
         })}
       </Grid>
-    </>
+    </Grid>
   );
 };
 

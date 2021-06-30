@@ -14,6 +14,13 @@ import TaxiIcon from "../images/taxi.png";
 
 export const pincodeToLocationUrl = "https://api.postalpincode.in/pincode/";
 
+export const mapboxAPIKey =
+  "pk.eyJ1IjoiYmV0YXBybyIsImEiOiJja2xmMHljaHgxMWh3MnltZ293cGd2YndvIn0.xy087WxsyPTgaQxS0l3edw";
+
+export const locationSearchURL =
+  "https://api.mapbox.com/geocoding/v5/mapbox.places/Amadalavalasa.json?access_token=" +
+  mapboxAPIKey;
+
 export const categoryListItems = [
   //https://linearicons.com/free#cheat-sheet
   {
@@ -66,7 +73,7 @@ export const categoryListItems = [
 export const weightCategories = [
   {
     name: "extraSmall",
-    title: "Extra-Small",
+    title: "Ultra-Small",
     minWeight: "0",
     maxWeight: "0.5",
     icon: PapersIcon

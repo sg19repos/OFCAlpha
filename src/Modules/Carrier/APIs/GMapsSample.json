@@ -1,0 +1,184 @@
+[
+  {
+    "description": "Amadalavalasa, Chinnajonnavalasa, Andhra Pradesh, India",
+    "placeId": "ChIJgckhEztqPDoR5khx18aMTh0",
+    "active": false,
+    "index": 0,
+    "formattedSuggestion": {
+      "mainText": "Amadalavalasa",
+      "secondaryText": "Chinnajonnavalasa, Andhra Pradesh, India"
+    },
+    "matchedSubstrings": [
+      {
+        "length": 6,
+        "offset": 0
+      }
+    ],
+    "terms": [
+      {
+        "offset": 0,
+        "value": "Amadalavalasa"
+      },
+      {
+        "offset": 15,
+        "value": "Chinnajonnavalasa"
+      },
+      {
+        "offset": 34,
+        "value": "Andhra Pradesh"
+      },
+      {
+        "offset": 50,
+        "value": "India"
+      }
+    ],
+    "types": [
+      "sublocality_level_1",
+      "sublocality",
+      "political",
+      "geocode"
+    ]
+  },
+  {
+    "description": "Amadalavalasa Railway Station Road, Amadalavalasa, Andhra Pradesh, India",
+    "placeId": "EkhBbWFkYWxhdmFsYXNhIFJhaWx3YXkgU3RhdGlvbiBSb2FkLCBBbWFkYWxhdmFsYXNhLCBBbmRocmEgUHJhZGVzaCwgSW5kaWEiLiosChQKEgmNKEo3N2o8OhHIRbh7I65RCBIUChIJgckhEztqPDoR5khx18aMTh0",
+    "active": false,
+    "index": 1,
+    "formattedSuggestion": {
+      "mainText": "Amadalavalasa Railway Station Road",
+      "secondaryText": "Amadalavalasa, Andhra Pradesh, India"
+    },
+    "matchedSubstrings": [
+      {
+        "length": 6,
+        "offset": 0
+      }
+    ],
+    "terms": [
+      {
+        "offset": 0,
+        "value": "Amadalavalasa Railway Station Road"
+      },
+      {
+        "offset": 36,
+        "value": "Amadalavalasa"
+      },
+      {
+        "offset": 51,
+        "value": "Andhra Pradesh"
+      },
+      {
+        "offset": 67,
+        "value": "India"
+      }
+    ],
+    "types": [
+      "route",
+      "geocode"
+    ]
+  },
+  {
+    "description": "Amadalavalasa, Andhra Pradesh, India",
+    "placeId": "ChIJLzzVQe96PDoRgcz0DAR8sAQ",
+    "active": false,
+    "index": 2,
+    "formattedSuggestion": {
+      "mainText": "Amadalavalasa",
+      "secondaryText": "Andhra Pradesh, India"
+    },
+    "matchedSubstrings": [
+      {
+        "length": 6,
+        "offset": 0
+      }
+    ],
+    "terms": [
+      {
+        "offset": 0,
+        "value": "Amadalavalasa"
+      },
+      {
+        "offset": 15,
+        "value": "Andhra Pradesh"
+      },
+      {
+        "offset": 31,
+        "value": "India"
+      }
+    ],
+    "types": [
+      "locality",
+      "political",
+      "geocode"
+    ]
+  },
+  {
+    "description": "Amadalpur, Haryana, India",
+    "placeId": "ChIJc-BphNr6DjkROqYRoBE7nQ8",
+    "active": false,
+    "index": 3,
+    "formattedSuggestion": {
+      "mainText": "Amadalpur",
+      "secondaryText": "Haryana, India"
+    },
+    "matchedSubstrings": [
+      {
+        "length": 6,
+        "offset": 0
+      }
+    ],
+    "terms": [
+      {
+        "offset": 0,
+        "value": "Amadalpur"
+      },
+      {
+        "offset": 11,
+        "value": "Haryana"
+      },
+      {
+        "offset": 20,
+        "value": "India"
+      }
+    ],
+    "types": [
+      "locality",
+      "political",
+      "geocode"
+    ]
+  },
+  {
+    "description": "Amadalavalasa Bridge, Andhra Pradesh, India",
+    "placeId": "EitBbWFkYWxhdmFsYXNhIEJyaWRnZSwgQW5kaHJhIFByYWRlc2gsIEluZGlhIi4qLAoUChIJqSvk5zVqPDoR0JzGNaa0Z7ISFAoSCX_Uk674RjU6EYPNrZW-u9Ez",
+    "active": false,
+    "index": 4,
+    "formattedSuggestion": {
+      "mainText": "Amadalavalasa Bridge",
+      "secondaryText": "Andhra Pradesh, India"
+    },
+    "matchedSubstrings": [
+      {
+        "length": 6,
+        "offset": 0
+      }
+    ],
+    "terms": [
+      {
+        "offset": 0,
+        "value": "Amadalavalasa Bridge"
+      },
+      {
+        "offset": 22,
+        "value": "Andhra Pradesh"
+      },
+      {
+        "offset": 38,
+        "value": "India"
+      }
+    ],
+    "types": [
+      "route",
+      "geocode"
+    ]
+  }
+]

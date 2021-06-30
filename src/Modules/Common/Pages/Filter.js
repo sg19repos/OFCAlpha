@@ -9,41 +9,44 @@ import ToggleButton from "@material-ui/lab/ToggleButton";
 import LocalTaxiRoundedIcon from "@material-ui/icons/LocalTaxiRounded";
 import ToggleButtonGroup from "@material-ui/lab/ToggleButtonGroup";
 
-export default function Filter() {
-  const [alignment, setAlignment] = useState("flight");
+const Filter = ({ vehicleFilter, setVehicleFilter }) => {
+  const [vehicleTabSelected, setVehicleTabSelected] = useState(vehicleFilter);
 
   const handleAlignment = (event, newAlignment) => {
-    setAlignment(newAlignment);
+    setVehicleTabSelected(newAlignment);
+    setVehicleFilter(newAlignment);
   };
 
   return (
     <ToggleButtonGroup
-      value={alignment}
+      value={vehicleTabSelected}
       exclusive
       onChange={handleAlignment}
       aria-label="text alignment"
     >
-      <ToggleButton value="bike">
+      <ToggleButton value={0}>
         <MotorcycleRoundedIcon />
       </ToggleButton>
-      <ToggleButton value="bus">
+      <ToggleButton value={1}>
         <DirectionsBusRoundedIcon />
       </ToggleButton>
-      <ToggleButton value="car">
+      <ToggleButton value={2}>
         <DriveEtaRoundedIcon />
       </ToggleButton>
-      <ToggleButton value="flight">
+      <ToggleButton value={3}>
         <FlightRoundedIcon />
       </ToggleButton>
-      <ToggleButton value="train">
+      <ToggleButton value={4}>
         <TrainRoundedIcon />
       </ToggleButton>
-      <ToggleButton value="truck">
+      <ToggleButton value={5}>
         <LocalShippingRoundedIcon />
       </ToggleButton>
-      <ToggleButton value="taxi">
+      <ToggleButton value={6}>
         <LocalTaxiRoundedIcon />
       </ToggleButton>
     </ToggleButtonGroup>
   );
-}
+};
+
+export default Filter;

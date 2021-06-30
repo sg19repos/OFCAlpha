@@ -3,21 +3,18 @@ import LayoutContainer from "./Modules/Common/Pages/LayoutContainer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import GlobalCSS from "../src/GlobalTheme";
-import SecondPage from "./Modules/Consigner/Pages/Secondpage";
-import { Counter } from "./features/counter/Counter";
+import Routes from "./Routes";
+// import SecondPage from "./Modules/Consigner/Pages/Secondpage";
 
 function App() {
   GlobalCSS();
   return (
-    // <Router>
-    //   <LayoutContainer />
-    //   {/*<Counter />*/}
-    // </Router>
-
     <Router>
       {/* {window.location.pathname !== "/" ? <Header /> : null} */}
-
-      <Switch>
+      <LayoutContainer>
+        <Routes />
+      </LayoutContainer>
+      {/* <Switch>
         <Route path="/">
           <LayoutContainer />
         </Route>
@@ -27,7 +24,7 @@ function App() {
         <Route path="/secondpage">
           <SecondPage />
         </Route>
-      </Switch>
+      </Switch>*/}
     </Router>
   );
 }

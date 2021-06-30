@@ -2,7 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import store from "./app/store";
+// import store from "./app/store";
+import Store from "./common/Store/Store";
 import { Provider } from "react-redux";
 import * as serviceWorker from "./serviceWorker";
 import { ThemeProvider } from "@material-ui/styles";
@@ -12,9 +13,13 @@ const theme = createMuiTheme({
   typography: {
     fontFamily: "Poppins"
   },
+  fontSize: {
+    font075: "0.75rem !important"
+  },
   palette: {
     primary: {
-      main: "#165788",
+      // main: "#165788",
+      main: "#595a9b",
       contrastText: "#fff"
     }
   },
@@ -26,7 +31,8 @@ const theme = createMuiTheme({
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <Provider store={store}>
+      {/*<Provider store={store}>*/}
+      <Provider store={Store}>
         <App />
       </Provider>
     </ThemeProvider>

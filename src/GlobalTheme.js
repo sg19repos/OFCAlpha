@@ -5,6 +5,9 @@ const GlobalCSS = makeStyles({
     typography: {
       fontFamily: "Poppins !important"
     },
+    font75: {
+      fontSize: "0.75rem !important"
+    },
     /*--------- Theme overrides start -----------*/
     ".MuiStepper-root": {
       padding: "0px"
@@ -56,17 +59,29 @@ const GlobalCSS = makeStyles({
     ".footerColor": {
       backgroundColor: "#F9F9FC"
     },
+    ".weightLight": {
+      fontWeight: "300 !important"
+    },
+    ".weightNormal": {
+      fontWeight: "500 !important"
+    },
     ".weightBold": {
-      fontWeight: "600"
+      fontWeight: "600 !important"
     },
     ".smallerFont": {
       fontSize: "1rem !important"
+    },
+    ".75Font": {
+      fontSize: "0.75rem !important"
+    },
+    ".1_5Font": {
+      fontSize: "1.25rem !important"
     },
     ".allCaps": {
       textTransform: "uppercase !important"
     },
     ".capitalise": {
-      textTransform: "capitalise !important"
+      textTransform: "capitalize !important"
     },
     ".violetColor": {
       color: "#595a9b"
@@ -84,7 +99,7 @@ const GlobalCSS = makeStyles({
       backgroundColor: "#fff"
     },
     ".plainColor": {
-      color: "#fff"
+      color: "#fff !important"
     },
     ".mainBackground": {
       backgroundColor: "#aab8c4"
@@ -119,11 +134,18 @@ const GlobalCSS = makeStyles({
     ".shadow1": {
       border: "1px solid #DBDBDB"
     },
+    ".onlyLeftBorder": { borderWidth: "0px 0px 0px 1px" },
+    ".onlyRightBorder": { borderWidth: "0px 1px 0px 0px" },
+    ".onlyTopBorder": { borderWidth: "1px 0px 0px 0px" },
+    ".onlyBottomBorder": { borderWidth: "0px 0px 1px 0px" },
     ".p-0": {
       padding: "0"
     },
     ".p-0_5": {
       padding: "0.5rem"
+    },
+    ".p-0_75": {
+      padding: "0.75rem"
     },
     ".p-1": {
       padding: "1rem !important"
@@ -131,11 +153,17 @@ const GlobalCSS = makeStyles({
     ".p-2": {
       padding: "2rem !important"
     },
+    ".pl-0_75": {
+      paddingLeft: "0.75rem !important"
+    },
     ".pl-0": {
       paddingLeft: "0"
     },
     ".p-4": {
       padding: "0.25rem !important"
+    },
+    ".p-16": {
+      padding: "1rem !important"
     },
     ".ptb-1s": {
       padding: "0.25rem 0 !important"
@@ -182,6 +210,12 @@ const GlobalCSS = makeStyles({
     ".pb-2": {
       paddingBottom: "2rem"
     },
+    ".pb-3": {
+      paddingBottom: "3rem"
+    },
+    ".pb-4": {
+      paddingBottom: "4rem"
+    },
     ".pr-0_25": {
       paddingRight: "0.25rem !important"
     },
@@ -205,6 +239,9 @@ const GlobalCSS = makeStyles({
     },
     ".pl-0_5": {
       paddingLeft: "0.5rem !important"
+    },
+    ".pl-0_25": {
+      paddingLeft: "0.25rem !important"
     },
     ".pl-1": {
       paddingLeft: "1rem !important"
@@ -232,6 +269,9 @@ const GlobalCSS = makeStyles({
     },
     ".m-0": {
       margin: "0"
+    },
+    ".m-4": {
+      margin: "4rem"
     },
     ".m-2": {
       margin: "2rem"
@@ -401,8 +441,9 @@ const GlobalCSS = makeStyles({
     },
     ".consignmentCard": {
       padding: "2% 1%",
-      borderRadius: "1%",
-      backgroundColor: "#595a9b0d"
+      borderRadius: "7%/30px",
+      // backgroundColor: "#595a9b0d"
+      backgroundColor: "#fff"
     },
     ".consignmentCardIcon": {
       margin: "10% 0% 0% 0%"
@@ -452,6 +493,97 @@ const GlobalCSS = makeStyles({
       borderRadius: "1%",
       backgroundColor: "#ffffff",
       minHeight: "150px"
+    },
+    ".selectedWeightCard": {
+      backgroundColor: "#ddd",
+      border: "2px solid #555"
+    },
+    ".positionRelative": {
+      position: "relative"
+    },
+    ".positionAbsolute": {
+      position: "absolute"
+    },
+    ".top0": {
+      top: 0
+    },
+    ".bottom0": {
+      bottom: 0
+    },
+    ".right0": {
+      right: 0
+    },
+    ".truncateWithDots": {
+      overflowX: "hidden",
+      textOverflow: "ellipsis"
+    },
+    ".addressCardContainer": {
+      // minHeight: "120px",
+      /*maxHeight: "120px",*/
+      // width: "auto",
+      overflow: "auto",
+      flexWrap: "nowrap"
+    },
+    ".location-search-input": {
+      width: "100%"
+    },
+    ".locationResultsIcon": {
+      borderRadius: "50%",
+      backgroundColor: "#ddd",
+      padding: "10%"
+    },
+    ".truncateText": {
+      width: "inherit",
+      whiteSpace: "nowrap",
+      overflow: "hidden",
+      textOverflow: "ellipsis"
+    },
+    ".searchTab": {
+      border: "2px solid #595a9b",
+      padding: "0.25rem",
+      borderRadius: "2%/9px"
+    },
+    ".btnLeftRadius": {
+      borderRadius: "2% 0% 0% 2%/4px"
+    },
+    ".btnRightRadius": {
+      borderRadius: "0% 2% 2% 0%/4px"
+    },
+    ".initialsText": {
+      textAlign: "center",
+      margin: "auto",
+      height: "2rem",
+      padding: "1rem",
+      borderRadius: "50%",
+      fontSize: "1.5rem",
+      width: "2rem"
+    },
+    ".setTrainBg": {
+      backgroundPosition: "center",
+      backgroundSize: "cover",
+      backgroundRepeat: "no-repeat"
+    },
+    ".lightWt": {
+      color: "#888",
+      fontWeight: "lighter"
+    },
+    ".nameDisplay": {
+      border: "1px solid #ddd",
+      padding: "1rem 0rem",
+      borderRadius: "4% 4% 4% 0/10px"
+    },
+    ".carrierVehicleIcon": {
+      border: "1px solid #ddd",
+      borderRadius: "10%",
+      padding: "1% 4%"
+    },
+    ".carrierFromTo": {
+      border: "1px solid #ddd",
+      padding: "1% 3%",
+      borderRadius: "2%/6px",
+      margin: "0% 1%",
+      backgroundColor: "#595a9b0d",
+      color: "#000"
     }
   }
 });
