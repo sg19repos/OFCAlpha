@@ -180,14 +180,14 @@ const ConsignmentsList = () => {
                           "administrative_area_level_2"
                         );
                       }
-                    ).long_name,
+                    )?.long_name,
                     destination: consignment?.consignment_dropLocationObject?.addressComponents?.find(
                       addressElement => {
                         return addressElement?.types?.includes(
                           "administrative_area_level_2"
                         );
                       }
-                    ).long_name
+                    )?.long_name
                   }}
                   title={consignment.consignment_description?.[0]?.title}
                   category={consignment.consignment_category}
