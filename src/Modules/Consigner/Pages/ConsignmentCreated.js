@@ -31,14 +31,14 @@ const ConsignmentCreated = ({ shipmentDetails, closeHandler }) => {
     addressElement => {
       return addressElement.types.includes("administrative_area_level_2");
     }
-  ).long_name;
+  )?.long_name;
 
   let locality = fromAddressComponents.find(addressElement => {
     return (
       addressElement.types.includes("locality") ||
       addressElement.types.includes("administrative_area_level_2")
     );
-  }).long_name;
+  })?.long_name;
 
   return (
     <Grid container>
