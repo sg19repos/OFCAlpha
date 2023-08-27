@@ -9,7 +9,7 @@ import Routes from "./Routes";
 function App() {
   GlobalCSS();
   return (
-    <Router>
+    <Router basename="/OFCAlpha">
       {/* {window.location.pathname !== "/" ? <Header /> : null} */}
       <LayoutContainer>
         <Routes />
